@@ -1,0 +1,18 @@
+fun welcome(){
+    println("=====================================================");
+    println("  S E L A M A T  D A T A N G  D I  P R O G R A M");
+    println("           PERULANGAN ( LOOP WHILE) ");
+    println("                BAHASA KOTLIN");
+    println("=====================================================");
+};
+
+fun main(){
+    welcome();
+    //harus menggunakan VAR pada penamaan fungsi variabel pada bahasa pemograman swift 
+    var n = 1;
+
+    while (n <= 5) {
+        println(" I WANNA BE YOURS " + n );
+        n+=1;
+    }
+}
