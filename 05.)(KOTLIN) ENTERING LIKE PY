@@ -1,0 +1,14 @@
+fun welcome(){
+    println("==============================================================================");
+    println("           S E L A M A T  D A T A N G  D I  P R O G R A M");
+    println("                       ENTERING LIKE PY");
+    println("                         BAHASA KOTLIN")
+    println("==============================================================================");
+}
+
+fun main(){
+    welcome()
+   println("tekan enter") 
+    var j = (readLine())
+    println("I LOVE YOU") 
+}
