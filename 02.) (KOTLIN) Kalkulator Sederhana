@@ -1,0 +1,84 @@
+
+fun welcome(){
+    println("======================================================");
+    println("  S E L A M A T  D A T A N G  D I  P R O G R A M");
+    println("               KALKULATOR SEDERHANA");
+    println("                  BAHASA KOTLIN");
+    println("======================================================")
+}
+
+fun tabel(){
+    print("======================================================\n")
+    print("\t\t KALKULATOR SEDERHANA KOTLIN \t\t\n")
+    print("======================================================\n")
+    print("1. Penjumlahan (+)\n")
+    print("2. Pengurangan (-)\n")
+    print("3. Pembagian   (/)\n")
+    print("4. Perkalian   (x)\n")
+    print("5. Modulus     (%)\n")
+    print("0. Exit\n")
+    print("======================================================\n")
+}
+
+fun main(){
+    welcome()
+    tabel()
+    var j = " ";
+    
+
+
+    do{
+    println("Masukkan angka pertama : ");
+    var angka1 = Integer.valueOf(readLine())
+
+    println("");
+    println("Masukkan angka kedua : ");
+    var angka2 = Integer.valueOf(readLine())
+
+    println("---------------------------------------------");
+    println("pilih sesuai pada tabel : ");
+    var pilihan = Integer.valueOf(readLine())
+    println("---------------------------------------------")
+    println("");
+
+    if ( pilihan == 1){
+        println("-----1.) PENJUMLAHAN ------")
+        var hasil = angka1 + angka2;
+        println("hasil penjumlahan " + angka1 + " + "  + angka2  + " = " + hasil )
+
+
+
+    }else if (pilihan == 2){
+        println("-----2.) PENGURANGAN ------")
+        var hasil = angka1 - angka2 ;
+        println("hasil pengurangan " + angka1 + " - "  + angka2  + " = " + hasil )
+
+
+
+    }else if (pilihan == 3){
+        println("-----3.) PEMBAGIAN ------")
+        var hasil = angka1 / angka2 
+        println("hasil pengurangan " + angka1 + " / "  + angka2  + " = " + hasil )
+
+
+}else if (pilihan == 4){
+    println("-----4.) PERKALIAN ------")
+    var hasil = angka1 * angka2 
+    println("hasil pengurangan " + angka1 + " * "  + angka2  + " = " + hasil )
+
+
+}else if (pilihan == 5){
+    println("-----5.) MODULUS ------")
+    var hasil = angka1 % angka2 
+    println("hasil pengurangan " + angka1 + " % "  + angka2  + " = " + hasil )
+}
+println("---------------------------------------------");
+println("");
+println("ingin coba program lagi ? [Y/N] : ");
+var j = (readLine())
+println("");
+}
+while  ( j == " Y " || j == "y");
+println("terima kasih telah mneggunakan program ini");
+println("made by ikkoc_awinata");
+}
