@@ -1,0 +1,46 @@
+fun judul() {//ini adalah fungsi (Kotlin) untuk method seperti void mada C++
+    println("==================================================================");
+    println("        S E L A M A T  D A T A N G  D I  P R O G R A M");
+    println("                    MENGETAHUI TIPE DATA");
+    println("                       BAHASA KOTLIN");
+    println("==================================================================");
+  }
+
+
+  fun main(){
+    judul();
+
+    println("1.) TIPE DATA INTEGER");
+    val dataInteger: Int = 0
+    println("Data        : $dataInteger");
+    println("Bertipe     : ${dataInteger:: class.simpleName}\n");
+
+
+    println("2.) TIPE DATA FLOAT");
+    val dataFloat: Double = 6.08
+    println("Data        : $dataFloat");
+    println("Bertipe     : ${dataFloat:: class.simpleName}\n");
+
+    println("3.) TIPE DATA STRING");
+    val dataString: String = " Ikko"
+    println("Data        : $dataString");
+    println("Bertipe     : ${dataString::class.simpleName}\n");
+
+    
+    println("4.) TIPE DATA BOOLEAN");//ini bisa True atau False
+    val dataBool: Boolean = true
+    println("Data        : $dataBool");
+    println("Bertipe     : ${dataBool::class.simpleName}\n");
+
+
+    println("5.) TIPE DATA CHAR");
+    val dataChar: Char = 'F'
+    println("Data        : $dataChar");
+    println("Bertipe     : ${dataChar::class.simpleName}\n");
+    
+    
+    println("6.) TIPE DATA ARRAY");
+    val dataArr: Array<Int> = arrayOf(1,2,3,4,5)
+    println("Data        : ${dataArr.contentToString()}")//ini untuk mengconvert menjadi yg sesuai dengan (arrayOF(1,2,3,4,5))
+    println("Bertipe     : ${dataArr::class.simpleName}\n");
+  }
