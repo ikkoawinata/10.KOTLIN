@@ -1,0 +1,477 @@
+
+import kotlin.math.sqrt
+import kotlin.math.pow
+
+fun welcome(){
+    println("================================================================");
+    println("       S E L A M A T  D A T A N G  D I  P R O G R A M");
+    println("     KUMPULAN RUMUS LUAS PERMUKAAN BANGUNAN DAN VOLUME");
+    println("                     BAHASA KOTLIN");
+    println("================================================================");
+}
+
+
+fun tabel(){
+    println("================================================================================")
+    println("A. R U M U S  K E L I L I N G  &  L U A S  B A N G U N  D A T A R\t\t")
+    println("================================================================================")
+    println("1. | Menghitung Keliling Lingkaran (JARI-JARI) (phi = 22/7)\t|")
+    println("2. | Menghitung Keliling Lingkaran (DIAMETER) (phi = 22/7)\t|")
+    println("3. | Menghitung Keliling Lingkaran (JARI-JARI) (phi = 3,14)\t|")
+    println("4. | Menghitung Keliling Lingkaran (DIAMETER) (phi = 3,14)\t|")
+    println("5. | Menghitung Panjang Busur pada Lingkaran\t\t\t|")
+    println("6. | Menghitung Keliling Persegi\t\t\t\t|")
+    println("7. | Menghitung Luas Persegi\t\t\t\t|")
+    println("8. | Menghitung Keliling Persegi Panjang\t\t\t|")
+    println("9. | Menghitung Luas Persegi Panjang\t\t\t\t|")
+    println("10.| Menghitung Keliling Jajar Genjang\t\t\t|")
+    println("11.| Menghitung Luas Jajar Genjang\t\t\t\t|")
+    println("12.| Menghitung Keliling Segitiga\t\t\t\t|")
+    println("13.| Menghitung Luas Segitiga\t\t\t\t|")
+    println("14.| Menghitung Luas Belah Ketupat\t\t\t\t|")
+    println("15.| Menghitung Luas Trapesium\t\t\t\t|")
+    println("==============================================================================")
+    println("B. R U M U S  L U A S  P E R M U K A A N  &  V O L U M E  B A N G U N  R U A N G")
+    println("==============================================================================")
+    println("16.| Menghitung Luas Kubus\t\t\t\t\t|")
+    println("17.| Menghitung Volume Kubus\t\t\t\t\t|")
+    println("18.| Menghitung Luas Balok\t\t\t\t\t|")
+    println("19.| Menghitung Volume Balok\t\t\t\t\t|")
+    println("20.| Menghitung Luas Permukaan Limas Segiempat\t\t\t|")
+    println("21.| Menghitung Volume Limas Segiempat\t\t\t\t|")
+    println("22.| Menghitung Volume Prisma Segitiga\t\t\t\t|")
+    println("23.| Menghitung Luas Prisma Segitiga\t\t\t\t|")
+    println("24.| Menghitung Volume Limas Segitiga\t\t\t\t|")
+    println("25.| Menghitung Luas Selimut Tabung (Jari-Jari)\t\t\t|")
+    println("26.| Menghitung Luas Selimut Tabung (Diameter)\t\t\t|")
+    println("27.| Menghitung Luas Permukaan Tabung (Jari-Jari)\t\t|")
+    println("28.| Menghitung Volume Tabung (Jari-Jari)\t\t\t|")
+    println("29.| Menghitung Luas Selimut Kerucut\t\t\t\t|")
+    println("30.| Menghitung Luas Permukaan Kerucut\t\t\t\t|")
+    println("31.| Menghitung Volume Kerucut\t\t\t\t\t|")
+    println("32.| Menghitung Luas Bola\t\t\t\t\t|")
+    println("33.| Menghitung Volume Bola\t\t\t\t\t|")
+    println("==============================================================================")
+}
+
+fun main(){
+    welcome();
+    tabel()
+    //var j = "";
+
+
+    do{
+    println("Pilih rumus yang akan dihitung (masukkan nomor sesuai pada tabel) : ");
+    var pil = Integer.valueOf(readLine())
+
+    println()
+
+    if (pil ==1){
+        println(">> 1.) Menghitung Keliling Lingkaran (JARI-JARI) +")
+        println("masukkan panjang jari-jari lingkaran : ")
+        var r = Integer.valueOf(readLine());
+        var keliling = 2.0 * 22.0/ 7.0 * r;
+        println("rumus keliling = 2.0 * 22.0/ 7.0 * r")
+        println("keliling lingkaran dengan jari-jari " + r + " adalah " + keliling);
+
+
+
+    }else if (pil == 2){
+        println(">> 2.) Menghitung Keliling Lingkaran (DIAMETER) +")
+        println("masukkan panjang diameter lingkaran : ")
+        var d = Integer.valueOf(readLine());
+        var   keliling = 22.0 / 7.0 * d
+        println("rumus keliling = 22 / 7 * d")
+        println("keliling lingkaran dengan diameter " + d + " adalah " + keliling);
+
+    }else if (pil == 3){
+        println(">> 3.) Menghitung Keliling Lingkaran (JARI-JARI) +")
+        println("masukkan panjang jari-jari lingkaran : ")
+        var r = Integer.valueOf(readLine());
+        var   keliling = 2.0 * 3.14 * r
+        println("rumus keliling = 2.0 * 3.14 * r ")
+        println("keliling lingkaran dengan diameter " + r + " adalah " + keliling);
+
+
+    }else if (pil == 4){
+        println(">> 4.) Menghitung Keliling Lingkaran (DIAMETER) +")
+        println("masukkan panjang diameter lingkaran : ")
+        var d = Integer.valueOf(readLine());
+        var   keliling = 3.14 * d;
+        println("rumus keliling = 3.14 * d ")
+        println("keliling lingkaran dengan diameter " + d + " adalah " + keliling);
+
+
+    }else if (pil == 5){
+        println(">> 5.) Menghitung Panjang Busur pada Lingkaran +")
+        println("masukkan panjang jari-jari lingkaran : ")
+        var r = Integer.valueOf(readLine());
+        println("masukkan panjang jari-jari lingkaran : ")
+        var pytagoras = Integer.valueOf(readLine());
+        var  busur = (pytagoras / 360.0) * (2.0 * 22.0 / 7.0 * r)
+        println("rumus busur = (pytagoras / 360.0) * (2 * 22.0 / 7.0 * r ")
+        println("hasilnya adalah = " + busur);
+
+
+    }else if (pil == 6){
+        println(">> 6.) Menghitung Keliling Persegi +")
+        println("masukkan panjang sisi persegi : ")
+        var s = Integer.valueOf(readLine());
+        var  keliling = 4.0 * s;
+        println("keliling = 4 * s")
+        println("hasilnya adalah = " + keliling);
+       
+    }else if (pil == 7){
+        println(">> 7.) Menghitung Luas Persegi +")
+        println("masukkan panjang sisi persegi : ")
+        var s = Integer.valueOf(readLine());
+        var  keliling = s * s;
+        println("keliling = s * s")
+        println("hasilnya adalah = " + keliling);
+
+
+    }else if (pil == 8){
+        println(">> 8.) Menghitung Keliling Persegi Panjang +")
+        println("masukkan panjang sisi persegi : ")
+        var a = Integer.valueOf(readLine());
+        println("masukkan panjang sisi persegi : ")
+        var b = Integer.valueOf(readLine());
+        println("keliling = 2 * (a + b)")
+        var keliling = 2.0 * (a + b)
+        println("hasilnya adalah = " + keliling);
+
+}else if (pil == 9){
+    println(">> 9.)  Menghitung Luas Persegi Panjang +")
+    println("masukkan panjang sisi persegi : ")
+    var a = Integer.valueOf(readLine());
+    println("masukkan panjang sisi persegi : ")
+    var b = Integer.valueOf(readLine());
+    println("Luas = a * b")
+    var keliling = a * b
+    println("hasilnya adalah = " + keliling);
+
+
+}else if (pil == 10){
+    println(">> 10.) Menghitung Keliling Jajar Genjang +")
+    println("Masukkan panjang alas (a) : ")
+    var a = Integer.valueOf(readLine());
+    println("Masukkan tinggi (t) : ")
+    var b = Integer.valueOf(readLine());
+    println("  keliling = 2 * (a + b)")
+    var keliling = 2.0 * (a + b);
+    println("hasilnya adalah = " + keliling);
+
+
+
+}else if (pil == 11){
+    println(">> 11.)  Menghitung Luas Jajar Genjang +")
+    println("Masukkan panjang alas (a) : ")
+    var a = Integer.valueOf(readLine());
+    println("Masukkan tinggi (t) : ")
+    var t = Integer.valueOf(readLine());
+    println("Luas = a * t")
+    var keliling = a * t
+    println("hasilnya adalah = " + keliling);
+
+
+    
+}else if (pil == 12){
+    println(">> 12.) Menghitung Keliling Segitiga  +")
+    println("Masukkan panjang alas (a) : ")
+    var a = Integer.valueOf(readLine());
+    println("Masukkan tinggi (b) : ")
+    var b = Integer.valueOf(readLine());
+    println("Masukkan tinggi (c) : ")
+    var c = Integer.valueOf(readLine());
+    var keliling = a + b + c;
+    println("Hasilnya adalah = " + keliling)
+
+
+
+}else if (pil == 13){
+    println(">> 13.) Menghitung Luas Segitiga  +")
+    println("Masukkan panjang alas (a) : ")
+    var a = Integer.valueOf(readLine());
+    println("Masukkan tinggi (b) : ")
+    var t = Integer.valueOf(readLine());
+    var keliling = 0.5 * a * t;
+    println("Hasilnya adalah = " + keliling)
+
+
+}else if ( pil == 14){
+    println(">> 14.)  Menghitung Luas Belah Ketupat  +")
+    println("Masukkan panjang alas (a) : ")
+    var a = Integer.valueOf(readLine());
+    println("Masukkan tinggi (b) : ")
+    var b = Integer.valueOf(readLine());
+    var keliling = 0.5 * a * b;
+    println("Hasilnya adalah = " + keliling)
+
+
+}else if ( pil == 15){
+    println(">> 15.) Menghitung Keliling Trapesium +")
+    println("Masukkan panjang alas (a) : ")
+    var a = Integer.valueOf(readLine());
+    println("Masukkan tinggi (b) : ")
+    var b = Integer.valueOf(readLine());
+    println("Masukkan tinggi (c) : ")
+    var c = Integer.valueOf(readLine());
+    println("Masukkan tinggi (d) : ")
+    var d = Integer.valueOf(readLine());
+    var keliling =  a + b + c + d
+    println("Hasilnya adalah = " + keliling)
+
+
+}else if (pil == 16){
+    println(">> 16.) Menghitung Luas Trapesium < +")
+    println("Masukkan panjang sisi AB : ")
+    var a = Integer.valueOf(readLine());
+    println("Masukkan panjang sisi BC : ")
+    var b = Integer.valueOf(readLine());
+    println("Masukkan panjang sisi CD : ")
+    var c = Integer.valueOf(readLine());
+    println("Masukkan tinggi trapesium : ")
+    var t = Integer.valueOf(readLine());
+    var keliling =   0.5 * t * (a + b) // 2
+    println("Hasilnya adalah = " + keliling)
+
+
+}else if ( pil == 17){
+    println(">> 17.) MENGHITUNG VOLUME KUBUS +")
+    println("Masukkan rusuk kubus : ")
+    var r = Integer.valueOf(readLine());
+    var keliling = r * r * r ;
+    println("Hasilnya adalah = " + keliling)
+
+
+}else if ( pil == 18){
+    println(">> 18.) MENGHITUNG LUAS BALOK+")
+    println("Masukkan panjang : ")
+    var a = Integer.valueOf(readLine());
+    println("Masukkan lebar : ")
+    var b = Integer.valueOf(readLine());
+    println("Masukkan tinggi trapesium : ")
+    var c = Integer.valueOf(readLine());
+    println("Luas = 2 * (Panjang * lebar) + 2 *(Panjang * tinggi) + 2 * (lebar*tinggi)")
+    var keliling = 2.0* (a * b) + 2.0 * (a * c) + 2.0 * (b * c);
+    println("Hasilnya adalah = " + keliling)
+
+
+}else if ( pil == 19){
+    println(">> 19.) MENGHITUNG VOLUME BALOK+<")
+    println("Masukkan panjang : ")
+    var a = Integer.valueOf(readLine());
+    println("Masukkan lebar : ")
+    var b = Integer.valueOf(readLine());
+    println("Masukkan tinggi trapesium : ")
+    var c = Integer.valueOf(readLine());
+    println("Volume + a * b * c ")
+    var keliling = a * b * c
+    println("Hasilnya adalah = " + keliling)
+
+
+
+}else if ( pil == 20){
+    println(">> 20.)  MENGHITUNG LUAS PERMUKAAN LIMAS SEGIEMPAT +")
+    println("masukkan sisi alasnya : ")
+    var a = Integer.valueOf(readLine());
+    println("masukkan tinggi alasnya ")
+    var b = Integer.valueOf(readLine());
+    var keliling = a * a;
+    var LuasSegitiga = 1.0/2.0 * a * b;
+    var LuasLimas =(4 * LuasSegitiga) + keliling;
+    println("Rumus = (4 * Luas Segitiga ) + luas alas = ( 4 * " + LuasSegitiga + " + " + keliling + " = " + LuasLimas );
+    println("Hasilnya adalah = " + LuasLimas);
+
+
+}else if (pil == 21){
+    println(">> 21.) MENGHITUNG VOLUME LIMAS SEGIEMPAT +")
+    println("Masukkan luas alas  ")
+    var alas = Integer.valueOf(readLine());
+    println("masukkan tinggi limas ")
+    var tinggi = Integer.valueOf(readLine());
+    var LuasAlas = alas * alas;
+    var rumus = 1.0/3.0 * alas * tinggi;
+    println("Rumusnya yaitu = V = 1/3 * Luas Alas * tinggi = 1/3 * " + alas + " * " + tinggi + " = " + rumus);
+  
+
+}else if ( pil == 22){
+    println(">> 22.) MENGHITUNG VOLUME PRISMA SEGITIGA  +")
+    println("Masukkan luas alas :  ")
+    var alas = Integer.valueOf(readLine());
+    println("masukkan tinggi limas : ")
+    var tinggi = Integer.valueOf(readLine());
+    println("masukkan tinggi T : ")
+    var T = Integer.valueOf(readLine());
+    var LuasAlas = 1.0 / 2.0 * alas * tinggi
+    var rumusa = LuasAlas * T;
+    println("Rumusnya yaitu : V = 1/2 * alas * tinggi * Tinggi T = 1/2 * " + alas + " * " + tinggi + " * " + T + " = " + rumusa);
+
+
+//ADA SYNTAX KHUSUS PADA CASE 23 
+}else if ( pil == 23){
+    println("\n---- 23.) MENGHITUNG LUAS PERMUKAAN PRISMA SEGITIGA ----")
+    println("===========================================================================")
+    println(" Lp Prisma Segitiga = Luas Selimut + Luas Alas")
+    
+    print(" Masukkan sisi : ")
+    val sisi: Double = readLine()?.toDoubleOrNull() ?: 0.0
+    
+    print(" Masukkan sisi lebar : ")
+    val lebar: Double = readLine()?.toDoubleOrNull() ?: 0.0
+    
+    print("Masukkan lebar prisma : ")
+    val L: Double = readLine()?.toDoubleOrNull() ?: 0.0
+    
+    val sisisegitiga: Double = lebar.pow(2) - L.pow(2)
+    println("hasil sisi segitiga yang hasilnya berbentuk akar  : $sisisegitiga")
+    
+    val sqrt: Double = sqrt(sisisegitiga)
+    println("akar dari '$sisisegitiga' yaitu : $sqrt")
+    
+    val L_selimut: Double = (sisi * lebar) + (sisi * L) + (sisi * sqrt)
+    println("Luas selimutnya adalah : $L_selimut")
+
+    var j = (readLine())
+    println("\neittsss ini belum selesai.....tekan enter untuk melihat hasil Luas Permukaan Prisma Segitiga")
+    
+    val L_alas: Double = 2 * (0.5 * sqrt * L)
+    val Lp_PS: Double = L_alas + L_selimut
+    
+    println("Rumusnya yaitu : Luas = 2 * (1/2 * sisi segitiga * lebar) + (panjang * lebar ) + (panjang * lebar(sisi segitiga) + (panjang * tinggi)")
+    println("\t      :2*(1/2*$sqrt * $L) + ($sisi * $lebar) + ($sisi * $sisisegitiga) + ($sisi * $sqrt ) = $Lp_PS")
+    
+    println("hasil dari Luas Permukaan Prisma Segitiga adalah : $Lp_PS cm")
+
+
+}else if (pil == 24){
+    println(">> 24.) MENGHITUNG VOLUME LIMAS SEGITIGA +")
+    println("Masukkan alas limas segitiga:  ")
+    var alas = Integer.valueOf(readLine());
+    println("masukkan tinggi limas : ")
+    var tinggi = Integer.valueOf(readLine());
+    println("masukkan tinggi alas limas : ")
+    var T = Integer.valueOf(readLine());
+    var rumus = 1.0/3.0*alas*T*tinggi;
+    println("Rumusnya yaitu : 1/3 *a*T*t = 1/3 * " + alas + " * " + T + " * " +  tinggi +" = " + rumus);
+
+
+}else if (pil == 25){
+    println(">> 25.) MENGHITUNG LUAS SELIMUT TABUNG (JARI-JARI) ")
+    println("Masukkan jari-jari :  ")
+    var r = Integer.valueOf(readLine());
+    println("Masukkan tinggi tabung :  ")
+    var T = Integer.valueOf(readLine());
+    var rumusa = 2.0*22.0/7.0*r*T;
+    var rumusb =  2.0*3.14*r*T;
+    println("Rumus A yaitu : Luas = 2*Phi*r*tinggi = 2* 22/7 " + " * " + r + " * " + T + " = " + rumusa );
+    println("Rumus B yaitu : Luas = 2*Phi*r*tinggi = 2* 3.14 " + " * " + r + " * " + T + " = " + rumusb );
+
+
+}else if (pil == 26){
+    println(">> 26.) MENGHITUNG LUAS SELIMUT TABUNG (DIAMETER)) ")
+    println("Masukkan diameter :  ")
+    var d = Integer.valueOf(readLine());
+    println("Masukkan tinggi tabung :  ")
+    var T = Integer.valueOf(readLine());
+    var rumusa = 22.0/7.0*d*T;
+    var rumusb =  3.14*d*T;
+    println("Rumus A yaitu : Luas = Phi*r*tinggi = 22/7 " + " * " + d + " * " + T + " = " + rumusa );
+    println("Rumus B yaitu : Luas = Phi*r*tinggi = 3.14 " + " * " + d + " * " + T + " = " + rumusb );
+
+
+}else if (pil == 27){
+    println(">> 27.) MENGHITUNG LUAS PERMUKAAN TABUNG (JARI-JARI) ")
+    println("Masukkan jari-jari :  ")
+    var r = Integer.valueOf(readLine());
+    println("Masukkan tinggi tabung :  ")
+    var T = Integer.valueOf(readLine());
+    var rumusa = 2*(22.0/7.0*r)*(r+T);
+    var rumusb = 2*(3.14*r)*(r+T);
+    println("Rumus A yaitu : Luas = 2 * (phi * r) * (jari-jari + tinggi) = 2 * (22/7 * " + r + " * ) * (" + r + " + " + T + " ) = " + rumusa);
+    println("Rumus B yaitu : Luas = 2 * (phi * r) * (jari-jari + tinggi) = 2 * (3,14 * " + r + " * ) * (" + r + " + " + T + " ) = " + rumusb);
+
+
+}else if (pil == 28){
+    println(">> 28.) MENGHITUNG VOLUME TABUNG (JARI-JARI) ")
+    println("Masukkan jari-jari volume tabung :  ")
+    var r = Integer.valueOf(readLine());
+    println("Masukkan tinggi tabung :  ")
+    var T = Integer.valueOf(readLine());
+    var rumusa = 22.0/7.0*(r*r)*T;
+    var rumusb = 3.14*(r*r)*T;
+    println("Rumus A yaitu : Volume = Phi * (r pangkat 2 * tinggi ) = 22/7 * " + (r*r) + " * " + T + " = " + rumusa );
+    println("Rumus B yaitu : Volume = Phi * (r pangkat 2 * tinggi ) = 3.14 * " + (r*r) + " * " + T + " = " + rumusb );
+
+
+}else if ( pil == 29){
+    println(">> 29.) MENGHITUNG LUAS SELIMUT KERUCUT ")
+    println("Masukkan jari-jari kerucut : :  ")
+    var r: Double = readLine()?.toDoubleOrNull() ?: 0.0
+    println("Masukkan sisi kerucut : :  ")
+    var sisi: Double = readLine()?.toDoubleOrNull() ?: 0.0
+    var pytagoras: Double =(r*r) - (sisi*sisi)
+    println("hasil sisi segitiga yang hasilnya berbentuk akar = " + pytagoras);
+    var sqrt: Double = sqrt(pytagoras);
+    println("akar dari " + pytagoras + " adalah = " + sqrt);
+    var rumus1 = 22.0/7.0*r*sqrt;
+    var rumus2 = 3.14*r*sqrt;
+    println("Rumus A yaitu : Luas = phi * r * sisi =  22/7 * " + r + " * " + sqrt +  " = " +  rumus1 );
+    println("Rumus B yaitu : Luas = phi * r * sisi =  3.14 * " + r + " * " + sqrt +  " = " +  rumus2 );
+
+
+}else if ( pil == 30){
+    println(">> 30.) MENGHITUNG LUAS PERMUKAAN KERUCUT ")
+    println("Masukkan jari-jari kerucut : :  ")
+    var r = Integer.valueOf(readLine());
+    println("Masukkan sisi kerucut : :  ")
+    var sisi = Integer.valueOf(readLine());
+   var rumus1 = (22.0/7.0 * r *(r + sisi));
+    var rumus2 = (3.14 * r *(r + sisi));
+    println("Rumus A yaitu : Luas = (phi * r * (r + tinggi sisi) = 22/7 * " + r + " * ( " + r + " + " + sisi + " ) = " + rumus1 );
+    println("Rumus A yaitu : Luas = (phi * r * (r + tinggi sisi) = 3.14 * " + r + " * ( " + r + " + " + sisi + " ) = " + rumus2 );
+
+
+
+}else if (pil == 31){
+    println(">> 31.) MENGHITUNG VOLUME KERUCUT ")
+    println("Masukkan jari-jari kerucut : :  ")
+    var r = Integer.valueOf(readLine());
+    println("Masukkan tinggi kerucut : :  ")
+    var T = Integer.valueOf(readLine());
+    var rumus1 = 1.0/3.0 * 22.0/7.0 * (r*r) * T;
+    var rumus2 = 1.0/3.0 * 3.14 * (r*r) * T;
+    println("Rumus A yaitu : Luas = 1/3 * phi * r pangkat 2 * tinggi = 1/3 * 22/7 * " + (r*r) + " * " + T + " = " +  rumus1);
+    println("Rumus B yaitu : Luas = 1/3 * phi * r pangkat 2 * tinggi = 1/3 * 3.14 * " + (r*r) + " * " + T + " = " +  rumus2);
+
+
+}else if (pil == 32){
+    println(">> 32.) MENGHITUNG LUAS BOLA ")
+    println("Masukkan jari-jari kerucut : :  ")
+    var r = Integer.valueOf(readLine());
+    println("Masukkan tinggi kerucut : :  ")
+    var T = Integer.valueOf(readLine());
+    var rumus1 = 1.0/3.0 * 22.0/7.0 * (r*r) * T;
+    var rumus2 = 1.0/3.0 * 3.14 * (r*r) * T;
+    println("Rumus A yaitu : Luas = 1/3 * phi * r pangkat 2 * tinggi = 1/3 * 22/7 * " + (r*r) + " * " + T + " = " +  rumus1);
+    println("Rumus B yaitu : Luas = 1/3 * phi * r pangkat 2 * tinggi = 1/3 * 3.14 * " + (r*r) + " * " + T + " = " +  rumus2);
+
+
+}else if (pil == 33){
+    println(">> 33.) MENGHITUNG VOLUME BOLA ")
+    println("Masukkan jari-jari atau diameter : :  ")
+    var r = Integer.valueOf(readLine());
+    var rumusa = 4.0/3.0*22.0/7.0*(r*r);
+    var rumusb = 4.0/3.0*3.14*(r*r);
+    println("Rumus A yaitu : Luas = 4/3 * phi * r pangkat 3 = 4/3 * 22/7 * " + (r*r) + " = " + rumusa );
+    println("Rumus B yaitu : Luas = 4/3 * phi * r pangkat 3 = 4/3 * 3.14 * " + (r*r) + " = " + rumusb );
+
+}
+println("--------------------------------------------------------------------")
+println("ingin coba program lagi ? [Y/N] : ")
+var j = (readLine())
+    }while (j == "y" || j == "Y");
+    println("Terima kasih telah menggunakan program ini");
+    println("Made by ikkoc_awinata")
+
+}
