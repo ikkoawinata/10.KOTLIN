@@ -1,0 +1,50 @@
+fun welcome() {
+    println("=============================================================")
+    println("        S E L A M A T  D A T A N G  D I  P R O G R A M")
+    println("      PERULANGAN WHILE DAN PERCABANGAN IF ELSE (UMUR)")
+    println("                            BAHASA KOTLIN")
+    println("=============================================================")
+}
+
+fun main() {
+    welcome()
+
+    var umur = 0
+    var j = ""
+
+    do {
+        println("masukkan umur anda sekarang : ")
+        umur = readLine()?.toIntOrNull() ?: 0
+
+        while (umur <= 12) {
+            println("saya tidak yakin umur anda $umur")
+            println("silakan diulangi lagi.....")
+            println("")
+
+            println("masukkan umur anda sekarang : ")
+            umur = readLine()?.toIntOrNull() ?: 0
+        }
+
+        when {
+            umur in 12..21 -> {
+                println("waahh anda baru saja beranjak dewasa")
+                println("gunakan waktu sebaik mungkin")
+            }
+            umur in 22..100 -> {
+                println("anda sudah beranjak tua")
+                println("jadilah seseorang yang dewasa dan jangan lupa perbaiki ibadahmu")
+            }
+            umur >= 100 -> {
+                println("WAAHHH ANDA SANGAT WAHHH SEKALII")
+            }
+        }
+        
+        println("")
+        print("ingin coba program lagi ? [Y/N] : ")
+        j = readLine() ?: ""
+    } while (j.uppercase() == "Y")
+
+    println("")
+    println("Terima kasih telah menggunakan program ini")
+    println("Made by ikkoc_awinata")
+}
