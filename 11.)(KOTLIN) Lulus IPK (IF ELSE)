@@ -1,0 +1,59 @@
+fun welcome(){
+    println("===============================================================");
+    println("                 SELAMAT DATANG DI PROGRAM");
+    println("               LULUS IPK ( PERCABANGAN IF ELSE)")
+    println("                      BAHASA KOTLIN");
+    println("===============================================================");
+}
+
+fun main(){
+    welcome();
+
+   
+    var angkatan = "";
+    var j = "";
+   
+do{
+
+    println("Masukkan nama mahasiswa/i : ");
+    var mhs = (readLine());
+
+    
+    println("Fakultas [contoh:Fakultas_teknik] : ");
+    var fak = (readLine());
+
+    
+    println("Jurusan [contoh:nama_jurusan] : ");
+    var jur = (readLine());
+
+    println("Prodi [contoh:nama_prodi] : ");
+    var prodi = (readLine());
+
+    println("Prodi [contoh:nama_prodi] :  ");
+    var prodi = (readLine());
+
+
+    println("Masukkan IPK Terakhir Mahasiswa/i : ");
+    var ipk = Integer.valueOf(readLine());
+
+    println("");
+
+    if ( ipk >= 4.00){
+        println(" saudara " + mhs + " dari angkatan " + angkatan + " dari fakultas " +  fak + "  dengan jurusan " +  jur + "  dengan program studi " + prodi +  " lulus dengan IPK sempurna "  + ipk);
+    }else if (ipk >= 3.49){
+        println(" saudara " + mhs + " dari angkatan " + angkatan + " dari fakultas " +  fak + "  dengan jurusan " +  jur + "  dengan program studi " + prodi +  " lulus dengan IPK sangat baik "  + ipk);
+
+}else if ( ipk >= 2.49){
+        println(" saudara " + mhs + " dari angkatan " + angkatan + " dari fakultas " +  fak + "  dengan jurusan " +  jur + "  dengan program studi " + prodi +  " lulus dengan IPK baik "  + ipk);
+}else if ( ipk >= 1.49){
+        println("saudara " + mhs + " dari angkatan " + angkatan + " dari fakultas " +  fak + "  dengan jurusan " +  jur + "  dengan program studi " + prodi +  " dinyatakan mengulang dengan IPK sempurna "  + ipk);
+}
+println("----------------------------------------------------------");
+println("ingin coba program lagi ? [Y/N] : ");
+j = (readLine())
+}while ( j == "y" || j == "Y");
+println("")
+println("Terima kasih telah menggunakan program ini");
+println("made by ikkoc_awinata")
+
+}
