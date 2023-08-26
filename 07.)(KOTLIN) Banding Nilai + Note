@@ -1,0 +1,36 @@
+fun tabel(){
+    println("========================================================");
+    println("   S E L A M A T  D A T A N G  D I  P R O G R A M");
+    println("MEMBANDINGKAN NILAI INTEGER DAN MENGELUARKAN NOTE");
+    println("                     BAHASA KOTLIN")
+    println("========================================================");
+}
+
+
+fun main(){
+    tabel();
+
+
+    do{
+    println("Masukkan nilai integer a : ")
+    var a = Integer.valueOf(readLine())
+    println();
+    println("Masukkan nilai integer b : ")
+    var b = Integer.valueOf(readLine())
+
+    if (a > b){
+        println("Nilai A lebih besar dari nilai B ");
+    }else if ( a < b){
+        println("Nilai A lebih kecil dari nilai B ");
+    }else if ( a == b){
+        println("Nilai A dan B sama besar");
+    }
+    println("");
+    println("-----------------------------------------------------------------");
+    println("apakah anda ingin mencoba program ini lagi ? [Y/N] : ");
+    var j = (readLine());
+}while ( j == "y" || j == "Y");
+println("");
+println("terima kasih telah menggunakan program ini");
+println("Made by ikkoc_awinata")
+}
