@@ -1,0 +1,45 @@
+fun welcome() {
+    println("===============================================================")
+    println("       S E L A M A T  D A T A N G  D I  P R O G R A M ")
+    println("INPUT DATA DAN MENENTUKAN NILAI DATA TERKECIL DAN TERBESAR")
+    println("===============================================================")
+}
+
+fun main() {
+    welcome()
+    var n: Int
+    var terkecil: Double
+    var terbesar: Double
+    var bil: Double
+    var j: Char = 'Y'
+
+    do {
+        print("Masukkan banyaknya data yang akan dimasukkan : ")
+        n = readLine()?.toIntOrNull() ?: 0
+        terbesar = 0.0
+        terkecil = 0.0
+
+        for (i in 1..n) {
+            print("Masukkan bilangan ke-$i : ")
+            bil = readLine()?.toDoubleOrNull() ?: 0.0
+
+            if (i == 1) {
+                terkecil = bil
+                terbesar = bil
+            } else if (bil < terkecil) {
+                terkecil = bil
+            } else if (bil > terbesar) {
+                terbesar = bil
+            }
+        }
+        println("")
+        println("Nilai terkecilnya adalah : $terkecil")
+        println("Nilai terbesar adalah : $terbesar")
+        println()
+        print("Mau coba lagi ? [Y/N] : ")
+        j = readLine()?.getOrNull(0) ?: 'N'
+    } while (j == 'Y' || j == 'y')
+
+    println("Terima kasih telah menggunakan program ini")
+    println("Made by Ikkoc_awinata")
+}
