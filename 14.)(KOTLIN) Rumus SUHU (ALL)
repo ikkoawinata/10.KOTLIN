@@ -1,0 +1,192 @@
+
+
+
+        fun welcome(){
+            println("==================================================================");
+            println("         S E L A M A T  D A T A N G  D I  P R O G R A M" );
+            println("                  K A L K U LA T O R  S U H U ");
+            println("                             BAHASA C#");
+            println("==================================================================");
+        }
+
+
+    fun tabel(){
+         println("========================================");
+    println("No.|             Nama Suhu              |");
+    println("========================================");
+    println("1  .| Derajat Celcius    -> Fahrenheit  |");
+    println("2  .| Derajat Fahrenheit -> Celcius     |");
+    println("3  .| Derajat Reamur     -> Fahrenheit  |");
+    println("4  .| Derajat Fahrenheit -> Reamur      |");
+    println("5  .| Derajat Reamur     -> Celcius     |");
+    println("6  .| Derajat Celcius    -> Reamur      |");
+    println("7  .| Derajat Kelvin     -> Celcius     |");
+    println("8  .| Derajat Celcius    -> Kelvin      |");
+    println("9  .| Derajat Kelvin     -> Fahrenheit  |");
+    println("10 .| Derajat Fahrenheit -> Kelvin      |");
+    println("11 .| Derajat Kelvin     -> Reamur      |");
+    println("12 .| Derajat Reamur     -> Kelvin      |");
+    println("========================================");
+    }
+
+
+            fun main(){
+                welcome();
+                tabel();
+
+                var c = 0;
+                var r = 0;
+                var f = 0;
+                var k = 0;
+                var pil = 0;
+               
+
+
+do{
+
+                println("masukkan pilihan anda sesuai dengan pada tabel : ");
+                var pil = Integer.valueOf(readLine())
+
+                if(pil == 1){
+                    println("-------- 1.) Anda memilih Celcius -> Fahrenheit -------- ");
+                    println("Masukkan suhu celcius yang diketahui : ");
+                    c = Integer.valueOf(readLine());
+                    f = ( 9 / 5 * c ) + 32;
+                    println("Rumusnya yaitu : 9/5 * C + (32) = 9/5 * " + c + " (32) = " + f);
+                    println("hasilnya adalah : " + f + " derajat faherenheit");
+                }
+
+
+                else if (pil == 2){
+                    println("-------- 2.) Anda memilih Fahrenheit  -> Celcius -------- ");
+                    println("Masukkan suhu fahrenheit yang diketahui : ");
+                    f = Integer.valueOf(readLine());
+                    c = 5 / 9* (f - (32));
+                    println("Rumusnya yaitu : 5/9 * °F - (32) = 5/9 * " + c + " - (32) =  + " + c);
+                    println("hasilnya adalah : " + c + " derajat celcius");
+                }
+
+
+                else if (pil == 3){
+                    println("-------- 3.) Anda memilih Reamur -> Fahrenheit -------- ");
+                    println("Masukkan suhu reamur yang diketahui : ");
+                    r = Integer.valueOf(readLine());
+                    f = (9 / 4 * r) + (32);
+                    println("Rumusnya yaitu : 9/4 * °R + (32) = 9/4 * " +  r  + "(32) = " + f );
+                    println("hasilnya adalah : " + f + " derajat fahrenheit");
+                }
+
+
+
+                else if (pil == 4){
+                    println("-------- 4.) Anda memilih Fahrenheit -> Reamur  -------- ");
+                    println("Masukkan suhu fahrenheit yang diketahui : ");
+                    f = Integer.valueOf(readLine());
+                    r = 4 / 9 * (f - 32);
+                    println("Rumusnya yaitu : (4/9) * (°F -32) = (4/9) * " + " ( " + f + " - 32 ) = " + r);
+                    println("hasilnya adalah : " + r + " derajat reamur");
+                }
+
+
+
+                else if (pil == 5){
+                    println("-------- 5 .) Anda memilih Reamur -> Celcius -------- ");
+                    println("Masukkan suhu reamur yang diketahui : ");
+                    r = Integer.valueOf(readLine());
+                    c = 5/ 4 * r;
+                    println("Rumusnya yaitu : 5/4 * °R = 5/4 * " + r + " = " + c);
+                    println("hasilnya adalah : " + c + " derajat celcius");
+                    }
+
+
+
+                    else if (pil == 6){
+                    println("-------- 6.) Anda memilih Celcius -> Reamur--------- ");
+                    println("Masukkan suhu celcius yang diketahui : ");
+                    c = Integer.valueOf(readLine());
+                    r =   4 / 5 * c;
+                    println("Rumusnya yaitu : 4/5 * °R = 4/5 * " + c + " = " +  r );
+                    println("hasilnya adalah : " + r + " derajat reamur");
+                    }
+
+
+
+                    else if (pil == 7){
+                    println("-------- 7 .) Anda memilih Kelvin -> Celcius --------- ");
+                    println("Masukkan suhu kelvin yang diketahui : ");
+                    k = Integer.valueOf(readLine());
+                    c =  273 - k;
+                    println("Rumusnya yaitu : 273 - k = 273 - " + k + " = " +  c );
+                    println("hasilnya adalah : " + c + " derajat celcius");
+                    }
+
+
+
+                    else if (pil == 8){
+                    println("-------- 8 .) Anda memilih Celcius -> Kelvin --------- ");
+                    println("Masukkan suhu celcius yang diketahui : ");
+                    c = Integer.valueOf(readLine());
+                    k = 273 + c;
+                    println("Rumusnya yaitu : 273 +  ° K = 273 + " + c + "  = " +  k );
+                    println("hasilnya adalah : " + k + " derajat kelvin");
+                    }
+
+
+
+                    else if (pil == 9){
+                    println("-------- 9.) Anda memilih Kelvin -> Fahrenheit --------- ");
+                    println("Masukkan suhu kelvin yang diketahui : ");
+                    k = Integer.valueOf(readLine());
+                    f = 9 / 5 * (k - 273) + 32;
+                    println("Rumusnya yaitu : 273 +  °K = 273 + " +  k + "  =  " +  f );
+                    println("hasilnya adalah : " + f + " derajat fahrenheit");
+                    }
+
+
+
+                    else if (pil == 10){
+                    println("-------- 10 .) Anda memilih Fahrenheit -> Kelvin --------- ");
+                    println("Masukkan suhu fahrenheit yang diketahui : ");
+                    f = Integer.valueOf(readLine());
+                    k = 5 / 9 * (f - 32) + 273;
+                    println("Rumusnya yaitu : 273 +  °K = 273 + " +  k + "  =  " +  f );
+                    println("hasilnya adalah : " + f + " derajat fahrenheit");
+                    }
+
+
+
+                    else if (pil == 11){
+                    println("-------- 11 .) Anda memilih Kelvin -> Reamur --------- ");
+                    println("Masukkan suhu kelvin yang diketahui : ");
+                    k = Integer.valueOf(readLine());
+                    r =  4 / 5 * (k - 273);
+                    println("Rumusnya yaitu : (4/5 * °K) - 273 = (4/5 * " + k + " ) - 273 = " + r);
+                    println("hasilnya adalah : " + r + " derajat reamur");
+                    }
+
+
+
+                    else if (pil == 12){
+                    println("-------- 12.) Anda memilih Reamur -> Kelvin --------- ");
+                    println("Masukkan suhu reamur yang diketahui : ");
+                    r = Integer.valueOf(readLine());
+                    k = (5 / 4 * r) + 273;
+                    println("Rumusnya yaitu : (5/4 * °R) + 273 = (5/4 * " + r + " ) + 273 = " + k);
+                    println("hasilnya adalah : " + k + " derajat kelvin");
+                    }
+
+
+
+                    else{
+                    println("pilihan tidak valid");
+                    }
+
+                    println("--------------------------------------------------------------");
+                    println("ingin coba program lagi ? [Y/N] :");
+                    var j = (readLine());
+                }  while ( j == "Y " || j == "y");
+                println("");
+                println("Terima kasih telah menggunakan program ini");
+                println("made by ikkoc_awinata");
+                }
+    
