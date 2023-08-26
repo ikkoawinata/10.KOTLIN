@@ -1,0 +1,36 @@
+fun welcome(){
+    println("==================================================================")
+    println("       S E L A M A T  D A T A N G  D I  P R O G R A M");
+    println("                      PEMBAGIAN + NOTE");
+    println("                       BAHASA KOTLIN")
+    println("==================================================================")
+}
+
+fun main(){
+    welcome();
+    var a = 0;
+    var b = 0;
+    var hasil = 0;
+    var j = " ";
+
+
+    do{
+    println("Masukkan bilangan yang akan dibagi : ");
+    a = Integer.valueOf(readLine())
+    println("Masukkan bilangan pembagi : ");
+    b = Integer.valueOf(readLine())
+    print("");
+    if ( b == 0){
+        println("tidak dapat dibagi dengan angka nol, maka hasilnya akan tetap ");
+    }else{
+        hasil = a/b;
+        print("hasil dari pembagian " + a + " / " + b + " = " + hasil\ )
+    }
+    println("--------------------------------------------------------------\n");
+    println("ingin coba program lagi ? [Y/N] : ");
+    var j = (readLine())
+}while ( j == "Y" || j == "y");
+print("")
+println("terima kasih telah menggunakan program ini");
+println("made by ikkoc_awinata");
+}
